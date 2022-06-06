@@ -105,7 +105,7 @@ table {
     padding: 0;
     outline: 1px dashed #c7c7c7;
     cursor: pointer;
-    font-size: 85%;
+    font-size: 2.6vw;
 
     &.is-active {
       background: #a3f1a3;
