@@ -1,12 +1,5 @@
-export default (array) => {
-    const newArray = JSON.parse(JSON.stringify(array))
-
-    for (let i = newArray.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = newArray[i];
-        newArray[i] = newArray[j];
-        newArray[j] = temp;
-    }
-
-    return newArray
-}
+export default (array) =>
+  array
+    .map((a) => ({ sort: Math.random(), value: a }))
+    .sort((a, b) => a.sort - b.sort)
+    .map((a) => a.value);
